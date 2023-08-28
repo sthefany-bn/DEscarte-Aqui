@@ -14,11 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('site.index');
+    return view ('site.index');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/cadastrocivil', [App\Http\Controllers\HomeController::class, 'cadastrocivil'])->name('cadastrocivil');
+Route::get('/login', function () {return view('site.login');});
+Route::get('/historico', function () {return view('site.historico');});
+Route::get('/pesquisarCatador', function () {return view('site.pesquisarCatador');});
+Route::get('/perfilCatador', function () {return view('site.perfilCatador');});
+Route::get('/meuPerfil', function () {return view('site.perfil');});
+Route::get('/verHistorico', function () {return view('site.verHistorico');});
+Route::get('/agendamento', function () {return view('site.agendamento');});
+Route::get('/cadastroCivil', function () {return view('site.cadastroCivil');});
+Route::get('/cadastroCatador', function () {return view('site.cadastroCatador');});
+Route::get('/continuaCatador', function () {return view('site.continuaCatador');});
+Route::get('/avaliar', function () {return view('site.avaliar');});
 
